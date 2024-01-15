@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:54:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/11 19:18:02 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/15 17:25:06 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,6 @@
 		~Fixed(void);
 
 		//operators
-		friend std::ostream &operator<<(std::ostream& outputStream, const Fixed &fixedObj);
-
 
 		bool				operator<(const Fixed &nb) const;
 		bool				operator>(const Fixed &nb) const;
@@ -68,4 +66,6 @@
 		static Fixed		&max(Fixed &nb1, Fixed &nb2);
 		static const Fixed	&max(const Fixed &nb1, const Fixed &nb2);
 	};
+
+	std::ostream &operator<<(std::ostream& outputStream, const Fixed &fixedObj);
 #endif
