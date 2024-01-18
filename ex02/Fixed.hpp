@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:54:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/15 17:25:06 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/18 10:25:49 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,16 +42,16 @@
 		bool				operator!=(const Fixed &nb) const;
 
 
-		void				operator=(const Fixed &new_cpy);
+		Fixed				&operator=(const Fixed &new_cpy);
 		Fixed				operator+(const Fixed &nb) const;
 		Fixed				operator-(const Fixed &nb) const;
 		Fixed				operator*(const Fixed &nb) const;
 		Fixed				operator/(const Fixed &nb) const;
 
 		Fixed				operator++(int);
-		Fixed				operator++(void);
+		Fixed				&operator++(void);
 		Fixed				operator--(int);
-		Fixed				operator--(void);
+		Fixed				&operator--(void);
 
 		//getters & setters
 		void				setRawBits(const int raw);

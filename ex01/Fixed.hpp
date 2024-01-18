@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:54:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/15 17:21:34 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/18 10:18:19 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@
 		Fixed(const int new_nb);
 		Fixed(const float new_nb);
 		~Fixed(void);
-		void operator=(const Fixed &new_cpy);
+		Fixed& operator=(const Fixed &new_cpy);
 		void setRawBits(const int raw);
 		int getRawBits(void) const;
 		float toFloat(void) const;
@@ -37,5 +37,5 @@
 	};
 
 	std::ostream& operator<<(std::ostream& outputStream, const Fixed& fixedObj);
-	
+
 #endif

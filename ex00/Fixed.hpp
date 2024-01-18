@@ -6,7 +6,7 @@
 /*   By: mgagne <mgagne@student.42lyon.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 15:54:22 by mgagne            #+#    #+#             */
-/*   Updated: 2024/01/10 20:24:18 by mgagne           ###   ########.fr       */
+/*   Updated: 2024/01/18 10:22:52 by mgagne           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 				Fixed(void);
 				Fixed(const Fixed &new_cpy);
 				~Fixed(void);
-		void	operator=(const Fixed &new_cpy);
+		Fixed	&operator=(const Fixed &new_cpy);
 		void	setRawBits(int const raw);
 		int		getRawBits(void) const;
 	};
